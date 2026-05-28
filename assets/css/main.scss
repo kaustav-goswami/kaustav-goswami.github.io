@@ -1,0 +1,25 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ===== Image deterrents ===== */
+/* Scope to content so you don't break icons/logos elsewhere */
+.page__content img,
+.page__content figure img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+  user-drag: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  /* Helps reduce iOS Safari long-press options */
+  -webkit-touch-callout: none;
+}

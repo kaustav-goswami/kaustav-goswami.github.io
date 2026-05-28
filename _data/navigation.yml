@@ -1,9 +1,5 @@
 main:
+  - title: "Publications"
+    url: /_pages/publications/
   - title: "Posts"
     url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/

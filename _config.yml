@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: "Kaustav Goswami"
+email: "kaustavgoswami.2013@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -24,9 +24,28 @@ github_username: username
 minimal_mistakes_skin: default
 search: true
 
+locale                   : "en-US"
+title                    : "Kaustav Goswami"
+title_separator          : "-"
+subtitle                 : "PhD Student at UC Davis"
+name                     : "Kaustav Goswami" # <br>কৌস্তভ গৌস্ৱামী"
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/"
+repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # "/assets/images/apple-touch-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "কৌস্তভ গৌস্ৱামী" # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 60
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -57,37 +76,61 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+# Site Author
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name             : "Kaustav Goswami"
+  avatar           : "/assets/images/base/profile.jpg"
+  bio              : "I am a computer architect. I mostly simulate things. Apart from being nerdy, I like to travel, take pictures and sketch stuff."
+  # email            : "kaustavgoswami.2013@gmail.com"
+  location         : "Davis, CA"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:kaustavgoswami.2013@gmail.com"
+    - label: "Resume"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "https://drive.google.com/file/d/1PBDADUWy4BOgSD9nSkTO-7WFXGQ23r6U/view?usp=sharing"
+    - label: "Google Scholar"
+      icon: "fab fa-fw fa-google-scholar"
+      url: "https://scholar.google.com/citations?user=1_1FgAoAAAAJ&hl=en"
+    # - label: "DBLP"
+    #   icon: "fas fas-fw fa-dblp"
+    #   url: "https://dblp.org/pid/05/7642-2.html"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/_kaustav_g_"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/kaustav-goswami"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/self._kg"
 
+
+# Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/_kaustav_g_"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/kaustav-goswami"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/self._kg"
+  since: "2013"
+
 
 defaults:
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
   # _posts
   - scope:
       path: ""
